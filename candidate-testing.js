@@ -23,9 +23,8 @@ candidateName = input.question(" Enter a Name: ")
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-question = candidateAnswer;
-candidateAnswer = input.question(question);
-
+askQuestion(question);
+console.log(candidateAnswer)
 }
 
 function gradeQuiz(candidateAnswers) {
