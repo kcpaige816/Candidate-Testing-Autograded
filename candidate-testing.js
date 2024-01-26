@@ -11,9 +11,17 @@ let candidateAnswer = '';
 
 
 //TODO: Variables for Part 2
-let questions = ["1) Who was the first American woman in space?", "2) True or false: 5 kilometer == 5000 meters?", "3) (5 + 3)/2 * 10 = ?", "4) Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2?", "5) What is the minimum crew size for the ISS?"];
+let questions = 
+[
+  "Who was the first American woman in space? ",
+  "True or false: 5 kilometer == 5000 meters? ",
+  "(5 + 3)/2 * 10 = ? ",
+  "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
+  "What is the minimum crew size for the ISS? "
+];
 let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 let candidateAnswers = [];
+
 
 
 function askForName() {
@@ -26,9 +34,9 @@ function askQuestion() {
   // candidateAnswer = input.question(question)
   for (let i = 0; i < questions.length; i++) {
 
-    candidateAnswers[i] = input.question(`${questions[i]} \nYour Answer:`);
-
-    console.log(`Correct Answer: ${correctAnswers[i]} \n`)
+    // candidateAnswers[i] = input.question(`${questions[i]} \nYour Answer:`);
+    candidateAnswers[i] = input.question(questions[i]);
+    console.log(`Correct Answer: ${correctAnswers[i]} \n`);
 
 
   }
@@ -42,14 +50,14 @@ function gradeQuiz() {
   } else {
     console.log("Incorrect.")
   } */
-  let c = 0;
-  for (let i = 0; i < candidateAnswers.length; i++) {
-    if (candidateAnswers[i] === correctAnswers[i]) {
-      c++
+  
+  // for (let i = 0; i < candidateAnswers.length; i++) {
+  //   if (candidateAnswers[i] === correctAnswers[i]) {
+
   
 
-    }
-  }
+  //   }
+  // }
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
 
