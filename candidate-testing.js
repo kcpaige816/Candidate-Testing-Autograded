@@ -29,7 +29,7 @@ function askForName() {
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   for (let i = 0; i < questions.length; i++) {
-    candidateAnswers[i] = input.question(`${questions[i] } \nYour Answer: `); 
+    candidateAnswers[i] = input.question(`${questions[i]} \nYour Answer: `); 
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
       console.log('Correct!\n');
       } else console.log(`Incorrect! Correct Answer: ${correctAnswers[i]} \n`);
@@ -49,9 +49,9 @@ for (let i = 0 ; i < candidateAnswers.length; i++) {
 let grade = (totalCorrectAnswers / questions.length) * 100;
 
 if (grade >= 80){ 
-console.log(`Status: PASSED \nFinal Grade: ${grade}% - ${totalCorrectAnswers}/${questions.length} responses correct. `)
+console.log(`Final Grade: ${grade}% \nStatus: PASSED `)
 } else { 
-  console.log(`Status: FAILED \nFinal Grade: ${grade}% - ${totalCorrectAnswers}/${questions.length} responses correct. `)
+  console.log(`Final Grade: ${grade}% \nStatus: FAILED `)
 }
     return grade;
 }
